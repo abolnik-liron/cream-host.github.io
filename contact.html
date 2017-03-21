@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Romisa - Portfolio Template"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+    <!-- Title -->
+    <title>Romisa - Portfolio HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+    
+    <!-- Shiv -->
+    <!--[if lte IE 9]
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="css/plugins.css" rel="stylesheet" />
+    <link href="css/icomoon-ultimate.css" rel="stylesheet" />
+    <link href="css/streamline.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300' rel='stylesheet' type='text/css'>
+    
+    <!-- Head Scripts -->
+    <script src="js/jquery/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+    
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('ss-contact-map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
+
+</head>
+<body >
+    
+    <div class="ss-preloader">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 18 18" preserveAspectRatio="xMidYMin meet">
+          <g>
+            <circle cx="0" cy="0" r="50%" width="100%" height="100%" fill="#ffffff" />
+            <path
+                d="M0,0 m-8,0
+                a8,8 0 1,1 16,0
+                a8,8 0 1,1 -16,0
+                "
+                fill="transparent"
+                stroke="#18ff01"
+                stroke-width="1px"
+                stroke-dasharray="50.3 50.3"
+                stroke-linecap="round" />
+          </g>
+
+          <defs>
+            <style type="text/css">
+              g {
+                -webkit-transform-origin: 50% 50%;
+                   -moz-transform-origin: 50% 50%;
+                    -ms-transform-origin: 50% 50%;
+                     -o-transform-origin: 50% 50%;
+                        transform-origin: 50% 50%;
+
+                -webkit-animation: rotate 2s infinite ease-in-out;
+                   -moz-animation: rotate 2s infinite ease-in-out;
+                    -ms-animation: rotate 2s infinite ease-in-out;
+                     -o-animation: rotate 2s infinite ease-in-out;
+                        animation: rotate 2s infinite ease-in-out;
+                
+                -webkit-transform: translate(8px, 8px) rotate(0deg);
+                -moz-transform: translate(8px, 8px) rotate(0deg);
+                -ms-transform: translate(8px, 8px) rotate(0deg);
+                -o-transform: translate(8px, 8px) rotate(0deg);
+                transform: translate(8px, 8px) rotate(0deg);
+              }
+
+              path {
+                stroke-dashoffset: 50.3;
+
+                -webkit-animation: circle 3s infinite ease-in-out;
+                   -moz-animation: circle 3s infinite ease-in-out;
+                    -ms-animation: circle 3s infinite ease-in-out;
+                     -o-animation: circle 3s infinite ease-in-out;
+                        animation: circle 3s infinite ease-in-out;
+              }
+
+              @-webkit-keyframes rotate {
+                to {
+                  -webkit-transform: translate(8px, 8px) rotate(359deg);
+                          transform: translate(8px, 8px) rotate(359deg);
+                }
+              }
+
+              @-moz-keyframes rotate {
+                to {
+                  -moz-transform: translate(8px, 8px) rotate(359deg);
+                       transform: translate(8px, 8px) rotate(359deg);
+                }
+              }
+
+              @-ms-keyframes rotate {
+                to {
+                  -ms-transform: translate(8px, 8px) rotate(359deg);
+                      transform: translate(8px, 8px) rotate(359deg);
+                }
+              }
+
+              @-o-keyframes rotate {
+                to {
+                  -o-transform: translate(8px, 8px) rotate(359deg);
+                     transform: translate(8px, 8px) rotate(359deg);
+                }
+              }
+
+              @keyframes rotate {
+                to {
+                  transform: translate(8px, 8px) rotate(359deg);
+                }
+              }
+
+              @-webkit-keyframes circle {
+                to {
+                  stroke-dashoffset: -50.3;
+                }
+              }
+
+
+              @-moz-keyframes circle {
+                to {
+                  stroke-dashoffset: -50.3;
+                }
+              }
+
+
+              @-ms-keyframes circle {
+                to {
+                  stroke-dashoffset: -50.3;
+                }
+              }
+
+
+              @-o-keyframes circle {
+                to {
+                  stroke-dashoffset: -50.3;
+                }
+              }
+
+              @keyframes circle {
+                to {
+                  stroke-dashoffset: -50.3;
+                }
+              }
+            </style>
+          </defs>
+        </svg>
+    </div>
+    
+    <!-- Start: Main Wrapper -->
+    <div id="ss-wrapper">
+        <div class="ss-main-wrap ss-blog-wrap">
+
+            <header class="ss-header ss-header-open clearfix">
+                <div class="ss-header-inner">
+                
+                    <a href="index.html" class="ss-logo">
+                        <img src="images/logo.png" width="240" height="93" alt="logo">
+                    </a>
+                    
+                    <div class="ss-header-content">
+                        <div class="ss-welcome-text">
+                            <p>HI, We’re romisa a digital creative agency making brands and website, check out our latest works and dont’t forget to contact us.</p>
+                        </div>
+                        <nav class="ss-main-nav-container ss-heading-font">
+                            <ul class="ss-main-nav">
+                                <li class="current-menu-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item-has-children" >
+                                    <a href="portfolio.html">Portfolio</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="portfolio-single.html">Portfolio Single</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="blog.html">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="blog-single.html">Blog Single</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="about-us.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">404</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="ss-header-bottom">
+                        <div class="ss-copyright">©Spnoy. All rights reserved.</div>
+                        <div class="ss-header-social-icons">
+                            <a href="#"><span class="moonicon-facebook"></span></a>
+                            <a href="#"><span class="moonicon-twitter"></span></a>
+                            <a href="#"><span class="moonicon-instagram"></span></a>
+                            <a href="#"><span class="moonicon-google-drive"></span></a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="ss-menu-button ss-open" >
+                        <span class="ss-line ss-line-1"></span>
+                        <span class="ss-line ss-line-2"></span>
+                        <span class="ss-line ss-line-3"></span>
+                    </a>
+
+                </div>
+            </header>
+
+            <section class="ss-articles-wrap ss-contact-wrap">
+                
+                <article class="ss-blog-item ">
+                    <figure class="ss-blog-item-fig">
+                        <div id="ss-contact-map">
+                            
+                        </div>
+                    </figure>
+                    <div class="ss-blog-item-content clearfix ss-typography">
+
+                        <div class="ss-gap" style="height: 40px;"></div>
+
+                        <h1 class="ss-page-heading">Hi There, Let's get in touch!</h1>
+
+                        <div class="ss-gap" style="height: 60px;"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="ss-heading">Contact</h3>
+                                <p>My name is Merely Ducard but I speak for Ra's al Ghul... a man greatly feared by the criminal underworld. A mon who can offer you a path. Someone like you is only here by choice. You have been exploring the criminal fraternity but whatever your original.</p>
+                                <div class="ss-gap" style="height: 80px;"></div>
+                            </div>
+                            <div class="col-sm-6">
+
+                                <div class="ss-list-item ss-heading-font">
+                                    <div class="ss-list-item-left">
+                                        <span class="streamicon-compass-3"></span>
+                                        <h5>Address</h5>
+                                    </div>
+                                    <div class="ss-list-item-right">
+                                        <p>Iran, Tehran, Fereshteh ST, Num 7-80005</p>
+                                    </div>
+                                </div>
+
+                                <div class="ss-list-item ss-heading-font">
+                                    <div class="ss-list-item-left">
+                                        <span class="streamicon-phone-2"></span>
+                                        <h5>Phone</h5>
+                                    </div>
+                                    <div class="ss-list-item-right">
+                                        <p>(555) 2161 4383</p>
+                                    </div>
+                                </div>
+
+                                <div class="ss-list-item ss-heading-font">
+                                    <div class="ss-list-item-left">
+                                        <span class="streamicon-file"></span>
+                                        <h5>Email</h5>
+                                    </div>
+                                    <div class="ss-list-item-right">
+                                        <p>infoz@spnoy.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="ss-gap" style="height: 80px;"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <h3 class="ss-heading">Say Hello!</h3>
+
+                                <div class="ss-gap" style="height: 15px;"></div>
+
+                                <div class="ss-contact-form-wrap">
+                                    <form action="php/contact.php" method="post" id="contact-form" class="ss-contact-form" novalidate="novalidate">
+                                        <div id="contact-form-inputs" class="ss-contact-form-inputs clearfix">
+                                            <p>
+                                                <input id="contact-name" name="contact-name" type="text" placeholder="name *" aria-required="true"/>
+                                            </p>
+                                            <p>
+                                                <input id="contact-email" name="contact-email" type="email" placeholder="email *" aria-required="true"/>
+                                            </p>
+                                            <p class="ss-contact-message-wrap">
+                                                <textarea id="contact-message" name="contact-message" cols="45" rows="5" aria-required="true" placeholder="message *"></textarea>
+                                            </p>
+                                        </div>
+                                        <p class="ss-contact-form-submit">
+                                            <img class="ajax-loader" src="images/contact/ajax-loader.gif" alt="Sending..." style="visibility: hidden;"/>
+                                            <input class="ss-button" name="submit" type="submit" id="contact-form-submit" value="send message"/>
+                                        </p>
+                                        <div class="ss-contact-form-response-output ss-contact-form-display-none"></div>
+                                    </form>
+                                </div>
+
+                                <div class="ss-gap" style="height: 30px;"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+    </div>
+    <!-- End: Main Wrapper -->
+
+
+    <!-- Body Scripts -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>
